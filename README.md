@@ -16,25 +16,25 @@ Provides C++ project set up with unit testing in GoogleTest in under 90 seconds
 
 3. Create a component and its tests. 
 
-```bash
-cd my_project/src
-../tools/create_component_and_unit_test.py sample
-```
+    ```bash
+    cd my_project/src
+    ../tools/create_component_and_unit_test.py sample
+    ```
 
 4. Run tests:
 
-```bash
-bazel test //src:all
-```
+    ```bash
+    bazel test //src:all
+    ```
 
-## What is `create_component_and_unit_test.py`
-
-```bash
-usage: create_component_and_unit_test.py component_name
-```
+## What is `create_component_and_unit_test.py`?
 
 A component is a .hpp/.cpp pair, with the test being in
 component\_name\_test.cpp.  All three of these get created by this Python file.
 An additional rule will be added to the `BUILD` file in that directory as well,
 creating `BUILD` if necessary.  If any of the three boilerplate C++ files exist,
 no files will get created or overwritten.
+
+```bash
+usage: create_component_and_unit_test.py component_name
+```
